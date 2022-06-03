@@ -7,6 +7,15 @@ terraform {
   }
 }
 
+resource "aws_s3_bucket" "mfadeletezsclaeradd" {
+  bucket = "examplebuckettftestzsclaeradd"
+  acl    = "private"
+  versioning {
+    enabled = false
+    mfa_delete = false
+  }
+}
+
 resource "aws_s3_bucket" "mfadelete" {
   bucket = "examplebuckettftest"
   acl    = var.public
